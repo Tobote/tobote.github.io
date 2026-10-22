@@ -17,7 +17,7 @@ export const appConfig: ApplicationConfig = {
     provideTranslateService({
       fallbackLang: 'en',
     }),
-    provideTranslateHttpLoader({ prefix: '/assets/i18n/', suffix: '.json' }),
+    provideTranslateHttpLoader({ prefix: 'assets/i18n/', suffix: '.json' }),
     provideAppInitializer(() => {
       const language = inject(LanguageService);
       return language.use(language.detect());
