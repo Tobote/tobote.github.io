@@ -144,14 +144,17 @@ static readonly VUE = new TagModel('Vue', 'green');
 
 The workflow in `.github/workflows/deploy.yml` builds and publishes the site on every push to `main`.
 
-1. Push the code to a GitHub repository.
+1. Name your repository **`<your-user>.github.io`** (for example `octocat.github.io`) and push the code to it.
+   GitHub Pages then serves the site from the root: `https://<your-user>.github.io/`.
 2. In the repository, open **Settings → Pages** and set **Source** to **GitHub Actions**.
-3. If your repository is **not** called `PortfolioWebsite`, replace `/PortfolioWebsite/` with `/<your-repo-name>/` in the `build:pages` script in `package.json`. GitHub Pages serves the site under that path.
-4. Push to `main`. Follow the progress in the **Actions** tab. When it finishes, the site is at `https://<your-user>.github.io/<your-repo-name>/`.
+3. Push to `main`. Follow the progress in the **Actions** tab. When it finishes, the site is live.
 
 You can also start a deploy by hand from **Actions → Deploy to GitHub Pages → Run workflow**.
 
-> Using a custom domain or a `<your-user>.github.io` repository? Then the site is served from the root: change the script to `ng build --base-href /`.
+> **Using a different repository name?** GitHub Pages then serves the site under a sub-path, `https://<your-user>.github.io/<your-repo-name>/`.
+> Change the `build:pages` script in `package.json` to `ng build --base-href /<your-repo-name>/`, otherwise the deployed site loads as a blank page.
+>
+> **Using a custom domain?** Keep `--base-href /` and set the domain in **Settings → Pages → Custom domain**.
 
 ## Commands
 
