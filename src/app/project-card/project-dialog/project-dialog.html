@@ -1,0 +1,37 @@
+<div class="project-dialog-container">
+  <header class="dialog-header">
+    <h2 mat-dialog-title>{{ data.title }}</h2>
+    <button class="close-button" type="button" aria-label="Close dialog" (click)="close()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </header>
+
+  <div mat-dialog-content class="dialog-content">
+    <app-carousel [images]="data.pictures" [alt]="data.title + ' images'" />
+
+    <section class="description mt-5">
+      <h3 class="font-sans font-bold text-xl mb-5">Description</h3>
+      <p>{{ data.description }}</p>
+      <p>
+        You can find this project on Github
+        <a
+          class="font-medium text-fg-brand hover:underline"
+          [href]="data.projectUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          >here</a
+        >
+      </p>
+    </section>
+  </div>
+  <div mat-dialog-actions align="start">
+    <div class="mt-auto px-6 pt-4 pb-2">
+      @for (tag of data.tags; track tag) {
+        <span
+          class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+          >#{{ tag.toString() }}</span
+        >
+      }
+    </div>
+  </div>
+</div>

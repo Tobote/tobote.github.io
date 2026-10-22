@@ -1,0 +1,43 @@
+@if (images.length) {
+  <section class="carousel" [attr.aria-label]="alt">
+    <img
+      class="carousel-image"
+      [src]="images[currentImageIndex]"
+      [alt]="alt + ' ' + (currentImageIndex + 1)"
+    />
+
+    @if (images.length > 1) {
+      <button
+        class="carousel-arrow previous"
+        type="button"
+        aria-label="Previous image"
+        (click)="previousImage()"
+      >
+        &#8249;
+      </button>
+      <button
+        class="carousel-arrow next"
+        type="button"
+        aria-label="Next image"
+        (click)="nextImage()"
+      >
+        &#8250;
+      </button>
+
+      <div class="carousel-indicators" aria-label="Choose image">
+        @for (image of images; track image; let index = $index) {
+          <button
+            class="indicator"
+            [class.active]="index === currentImageIndex"
+            type="button"
+            [attr.aria-label]="'Show image ' + (index + 1)"
+            [attr.aria-current]="index === currentImageIndex ? 'true' : null"
+            (click)="selectImage(index)"
+          ></button>
+        }
+      </div>
+    }
+  </section>
+} @else {
+  <div class="empty-gallery">No images available.</div>
+}

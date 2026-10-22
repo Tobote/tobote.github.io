@@ -1,0 +1,71 @@
+.project-dialog-container {
+	color: #202124;
+}
+
+.dialog-header {
+	align-items: center;
+	border-bottom: 1px solid #e5e7eb;
+	display: flex;
+	justify-content: space-between;
+	padding: 0 0.85rem 0 1.25rem;
+}
+
+.dialog-header h2 {
+	font-size: 1.7rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0.7rem 0;
+}
+
+.close-button,
+.carousel-arrow,
+.indicator {
+	border: 0;
+	cursor: pointer;
+}
+
+.close-button {
+	appearance: none;
+	background: transparent;
+	border: 0;
+	color: #6b7280;
+	font-size: 2rem;
+	line-height: 1;
+	outline: none;
+	padding: 0.25rem 0.45rem;
+}
+
+.close-button:hover {
+	color: #111827;
+}
+
+.close-button:focus {
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.close-button:focus-visible {
+	border: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+}
+
+.dialog-content {
+	margin: 0;
+	max-height: 80vh;
+	padding: 1rem 1.25rem 1.25rem;
+}
+
+.description p {
+	color: #4b5563;
+	line-height: 1.55;
+	margin: 0;
+}
+
+@media (max-width: 640px) {
+	.dialog-content {
+		padding: 0.75rem;
+	}
+
+}

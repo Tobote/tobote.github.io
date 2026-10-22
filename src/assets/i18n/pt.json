@@ -1,0 +1,239 @@
+{
+  "languages": {
+    "portuguese": "Português",
+    "english": "Inglês"
+  },
+  "header": {
+    "role": "Desenvolvedor Fullstack"
+  },
+  "navigation": {
+    "home": "Início",
+    "portfolio": "Portfólio",
+    "resume": "Currículo",
+    "contact": "Contato"
+  },
+  "home": {
+    "about": {
+      "heading": "Sobre Mim",
+      "imageAlt": "Retrato de Célio Pimentel",
+      "biography": "Graduado em Sistemas de Informação pela Universidade Estácio de Sá, com experiência nos últimos 5 anos em Desenvolvimento de Software, e foco no desenvolvimento Fullstack, atuando em projetos inovadores e com variadas tecnologias como: Angular, Node.js, C#, .NET Core e JavaScript."
+    },
+    "featuredProject": {
+      "heading": "Projetos em Destaque"
+    }
+  },
+  "resume": {
+    "pdf": {
+      "url": "assets/pdf/resume.pdf",
+      "fileName": "Celio_Pimentel_Curriculo_PT.pdf"
+    },
+    "download": "Baixar Currículo em PDF",
+    "sections": {
+      "experience": "Experiência Profissional",
+      "education": "Formação",
+      "skills": "Habilidades"
+    },
+    "labels": {
+      "project": "Projeto",
+      "courses": "Cursos Complementares"
+    },
+    "experience": [
+      {
+        "role": "Analista de Desenvolvimento Fullstack Pleno",
+        "company": "Venturus",
+        "location": "Remoto",
+        "startDate": "2025-10",
+        "summary": "Desenvolvedor de Software com foco em Node.js e Angular, atuando na evolução e manutenção de sistemas complexos.",
+        "highlights": [
+          "Novas funcionalidades e manutenção de código legado, seguindo boas práticas de desenvolvimento.",
+          "Migração de aplicações Angular, modernizando a base tecnológica e otimizando performance.",
+          "Back-end e infraestrutura com Docker, Kubernetes e APIs escaláveis.",
+          "Monitoramento e análise de dados utilizando Elastic.",
+          "Colaboração com equipes multidisciplinares, sempre com foco em escalabilidade, performance e arquitetura sustentável."
+        ],
+        "technologies": [
+          "Node.js",
+          "Docker",
+          "Kubernetes",
+          "MySQL",
+          "Elastic Stack",
+          "TypeScript",
+          "JavaScript",
+          "AngularJS"
+        ]
+      },
+      {
+        "role": "Desenvolvedor Fullstack Pleno",
+        "company": "Radix Engenharia e Software",
+        "location": "Remoto",
+        "startDate": "2023-11",
+        "endDate": "2025-10",
+        "summary": "Desenvolvimento fullstack para clientes do setor industrial, atuando principalmente no front-end com Angular integrado a back-ends .NET e na manutenção de sistemas legados nos projetos Sotreq e Hydro.",
+        "projects": [
+          {
+            "name": "Sotreq",
+            "description": "Desenvolvimento front-end com Angular, criação de telas e componentes, atualização de design do portal legado e integração com APIs. Apoio no back-end com criação de nova API e manutenção de integrações em sistema legado.",
+            "technologies": [
+              "Angular",
+              "C#",
+              ".NET Core",
+              "Oracle DB"
+            ]
+          },
+          {
+            "name": "Hydro",
+            "description": "Implementação de novas funcionalidades em sistema existente, atuando no front-end (Angular, TypeScript) e back-end (C#, .NET Core). Criação de telas, endpoints e integrações de APIs. Experiência com MySQL e SQL Server.",
+            "technologies": [
+              "C#",
+              ".NET Core",
+              "Angular",
+              "TypeScript",
+              "MySQL",
+              "SQL Server"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "Analista de Desenvolvimento Pleno",
+        "company": "Stone Age",
+        "location": "Rio de Janeiro / RJ",
+        "startDate": "2022-04",
+        "endDate": "2023-11",
+        "summary": "Responsável pelo desenvolvimento de melhorias para um dos nossos clientes, realização de reuniões de alinhamento com o cliente, correção de bugs e pair programming com profissionais juniores.",
+        "highlights": [
+          "Criação de um novo fluxo de venda de produtos.",
+          "Cadastro de biometria do cliente em nossa base de dados.",
+          "Integração com a API dos Correios para consulta de CEP."
+        ],
+        "technologies": [
+          "C#",
+          "JavaScript",
+          "Node.js",
+          "AWS",
+          "TypeScript",
+          "MySQL",
+          "Git",
+          "Jira",
+          "Scrum"
+        ]
+      },
+      {
+        "role": "Desenvolvedor Fullstack",
+        "company": "Radix Engenharia e Software",
+        "location": "Remoto",
+        "startDate": "2020-10",
+        "endDate": "2022-04",
+        "summary": "Desenvolvimento fullstack com React e C#, atuando na criação de CRUDs, testes e features no projeto Concrelagos, e na entrega da plataforma de monitoramento ambiental PrevisIA.",
+        "projects": [
+          {
+            "name": "Concrelagos",
+            "description": "Desenvolvimento de CRUDs para inserção de diversos objetos, criação de testes unitários, correção de bugs e desenvolvimento de features do front-end."
+          },
+          {
+            "name": "PrevisIA",
+            "description": "Plataforma de IA para monitoramento do desmatamento no bioma Amazônia, patrocinada pelo Microsoft AI for Earth, Imazon e Fundo Vale. Deploy do projeto em ambiente de produção, apresentação para o cliente e sponsors e treinamento do cliente para alimentar a plataforma com as informações geradas."
+          }
+        ],
+        "technologies": [
+          "React",
+          "C#",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      }
+    ],
+    "present": "Atual",
+    "duration": {
+      "year": "{{count}} ano",
+      "years": "{{count}} anos",
+      "month": "{{count}} mês",
+      "months": "{{count}} meses",
+      "and": "e"
+    },
+    "inProgress": "Em andamento",
+    "education": [
+      {
+        "degree": "Bacharelado em Sistemas de Informação",
+        "institution": "Universidade Estácio de Sá",
+        "location": "Rio de Janeiro, RJ",
+        "startDate": "2018-01",
+        "endDate": "2023-06"
+      }
+    ],
+    "courses": [
+      "Técnico em Eletrônica",
+      "Desenvolvimento Web",
+      "Harvard CS50"
+    ],
+    "skills": [
+      {
+        "category": "Front-end",
+        "items": [
+          "Angular",
+          "AngularJS",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Back-end",
+        "items": [
+          "C#",
+          ".NET Core",
+          "Node.js",
+          "APIs REST",
+          "Padrão BFF"
+        ]
+      },
+      {
+        "category": "Bancos de Dados",
+        "items": [
+          "MySQL",
+          "SQL Server",
+          "Oracle DB"
+        ]
+      },
+      {
+        "category": "DevOps e Cloud",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "AWS",
+          "RabbitMQ",
+          "Elastic Stack"
+        ]
+      },
+      {
+        "category": "Testes",
+        "items": [
+          "Jest",
+          "Cypress",
+          "Testes Unitários",
+          "Testes de Integração"
+        ]
+      },
+      {
+        "category": "Ferramentas e Metodologias",
+        "items": [
+          "Git",
+          "Jira",
+          "Scrum",
+          "Code Review",
+          "Pair Programming"
+        ]
+      },
+      {
+        "category": "Idiomas",
+        "items": [
+          "Português – Nativo",
+          "Inglês – Avançado"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+<div class="mx-auto max-w-7xl px-4 pt-6">
+  <div class="mb-2">
+    <div>
+      <button
+        class="filter-btn mb-2 me-2"
+        mat-button
+        matButton="outlined"
+        (click)="isCollapsed = !isCollapsed"
+      >
+        Filter
+      </button>
+      @if (hasActiveFilters()) {
+        <button
+          class="mb-2 me-2 filter-btn-gray"
+          mat-button
+          matButton="outlined"
+          (click)="clearFilters()"
+        >
+          Reset
+        </button>
+      }
+    </div>
+    <div
+      class="grid overflow-hidden transition-[grid-template-rows] duration-300 ease-in-out"
+      [ngClass]="isCollapsed ? 'grid-rows-[0fr]' : 'grid-rows-[1fr]'"
+    >
+      <div class="min-h-0 overflow-hidden">
+        <div class="filter-panel mb-2 rounded border bg-white p-3 shadow-sm">
+          <form novalidate (submit)="$event.preventDefault()">
+            <div class="grid grid-cols-2 gap-4">
+              <fieldset>
+                <legend class="mb-2 text-sm font-bold">Languages:</legend>
+                @for (language of languages; track language) {
+                  <label class="flex cursor-pointer items-center gap-2 py-0.5 text-sm">
+                    <input
+                      type="checkbox"
+                      class="accent-[#005cbb]"
+                      [formField]="filterForm.languages[language]"
+                    />
+                    {{ language }}
+                  </label>
+                }
+              </fieldset>
+              <fieldset>
+                <legend class="mb-2 text-sm font-bold">Frameworks:</legend>
+                @for (framework of frameworks; track framework) {
+                  <label class="flex cursor-pointer items-center gap-2 py-0.5 text-sm">
+                    <input
+                      type="checkbox"
+                      class="accent-[#005cbb]"
+                      [formField]="filterForm.frameworks[framework]"
+                    />
+                    {{ framework }}
+                  </label>
+                }
+              </fieldset>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    @for (project of filteredProjects(); track project.id) {
+      <app-project-card [project]="project" />
+    }
+  </div>
+</div>

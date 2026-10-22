@@ -1,0 +1,63 @@
+<div class="container mx-auto flex flex-col items-center">
+  <a
+    class="mb-2 mt-5"
+    mat-button
+    matButton="outlined"
+    [href]="'resume.pdf.url' | translate"
+    [attr.download]="'resume.pdf.fileName' | translate"
+  >
+    {{ 'resume.download' | translate }}
+  </a>
+  <div class="mb-4 mt-4 w-full">
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-lg justify-center items-center">
+            {{ 'resume.sections.experience' | translate }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="flex flex-col gap-8 py-2">
+          @for (experience of experiences(); track $index) {
+            <app-experience-item [experience]="experience" />
+          }
+        </div>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-lg justify-center items-center">
+            {{ 'resume.sections.education' | translate }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="flex flex-col gap-8 py-2">
+          @for (item of education(); track $index) {
+            <app-education-item [education]="item" />
+          }
+        </div>
+        @if (courses().length) {
+          <h3 class="mt-8 text-left text-base font-bold text-gray-900">
+            {{ 'resume.labels.courses' | translate }}
+          </h3>
+          <div class="mt-3 flex flex-wrap gap-2">
+            @for (course of courses(); track course) {
+              <span class="rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-700">
+                {{ course }}
+              </span>
+            }
+          </div>
+        }
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="text-lg justify-center items-center">
+            {{ 'resume.sections.skills' | translate }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <div class="grid grid-cols-1 gap-4 py-2 sm:grid-cols-2">
+          @for (group of skills(); track $index) {
+            <app-skill-group [skillGroup]="group" />
+          }
+        </div>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

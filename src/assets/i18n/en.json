@@ -1,0 +1,242 @@
+{
+  "languages": {
+    "portuguese": "Portuguese",
+    "english": "English"
+  },
+  "header": {
+    "role": "Full-stack Developer"
+  },
+  "navigation": {
+    "home": "Home",
+    "portfolio": "Portfolio",
+    "resume": "Resume",
+    "contact": "Contact"
+  },
+  "home": {
+    "about": {
+      "heading": "About Me",
+      "imageAlt": "Portrait of Célio Pimentel",
+      "biography": "I'm a software developer on a constant learning road. Graduated in Information Systems from Estácio de Sá University, with experience in the last 5 years in Software Development, and focus on Fullstack development, working on innovative projects and with various technologies such as Angular, Node.js, C#, .Net Core, and Javascript."
+    },
+    "featuredProject": {
+      "heading": "Featured Project"
+    }
+  },
+  "resume": {
+    "pdf": {
+      "url": "assets/pdf/resume_en.pdf",
+      "fileName": "Celio_Pimentel_Resume_EN.pdf"
+    },
+    "download": "Download PDF Resume",
+    "sections": {
+      "experience": "Work Experience",
+      "education": "Education",
+      "skills": "Skills"
+    },
+    "labels": {
+      "project": "Project",
+      "courses": "Additional Courses"
+    },
+    "experience": [
+      {
+        "role": "Fullstack Developer",
+        "company": "Venturus",
+        "location": "Remote",
+        "startDate": "2025-10",
+        "summary": "Working on the development and improvement of the product for a major strategic partner, focusing on building modern and responsive interfaces as well as enhancing existing features.",
+        "highlights": [
+          "Bug fixing and maintenance of existing features to ensure system stability and reliability.",
+          "Implementing a new audience matching functionality across multiple regions.",
+          "Developing unit and integration tests using Cypress and Jest to guarantee code quality and system robustness.",
+          "Working with modern technologies such as Node.js, Docker, Kubernetes, Elasticsearch, Kibana and RabbitMQ to build and maintain distributed, high-performance applications."
+        ],
+        "technologies": [
+          "Node.js",
+          "Docker",
+          "Kubernetes",
+          "MySQL",
+          "Elastic Stack",
+          "TypeScript",
+          "JavaScript",
+          "AngularJS"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "company": "Radix Engineering and Software",
+        "location": "Remote",
+        "startDate": "2023-11",
+        "endDate": "2025-10",
+        "summary": "Fullstack development for industry clients, working mainly on Angular front ends integrated with .NET back ends and maintaining legacy systems across the Sotreq and Hydro projects.",
+        "projects": [
+          {
+            "name": "Sotreq",
+            "description": "Focused on front-end development, creating new features and integrating with REST APIs. Also worked on a legacy project, fixing bugs and migrating integrations to new APIs under development. Used the BFF pattern for the back end and Angular 14+ for the front end.",
+            "technologies": [
+              "Angular",
+              "C#",
+              ".NET Core",
+              "Oracle DB"
+            ]
+          },
+          {
+            "name": "Hydro",
+            "description": "Fullstack development for a legacy project, creating new endpoints and improving charts from a web API with vanilla JavaScript.",
+            "technologies": [
+              "C#",
+              ".NET Core",
+              "Angular",
+              "TypeScript",
+              "MySQL",
+              "SQL Server"
+            ]
+          }
+        ]
+      },
+      {
+        "role": "Software Developer",
+        "company": "Stone Age",
+        "location": "Rio de Janeiro / RJ",
+        "startDate": "2022-04",
+        "endDate": "2023-11",
+        "summary": "Developed improvements and new features for client products, focusing on system integrations, external API consumption and legacy system maintenance.",
+        "highlights": [
+          "Developing new features for our products",
+          "System integration",
+          "Consuming external APIs",
+          "Legacy system maintenance"
+        ],
+        "technologies": [
+          "C#",
+          "JavaScript",
+          "Node.js",
+          "AWS",
+          "TypeScript",
+          "MySQL",
+          "Git",
+          "Jira",
+          "Scrum"
+        ]
+      },
+      {
+        "role": "Fullstack Developer",
+        "company": "Radix Engineering and Software",
+        "location": "Remote",
+        "startDate": "2020-10",
+        "endDate": "2022-04",
+        "summary": "Fullstack development with React and C#, contributing to features, code quality and team growth, including the PrevisIA environmental monitoring platform.",
+        "highlights": [
+          "Intern mentoring",
+          "Front-end and back-end feature development using React and C#",
+          "Code refactoring",
+          "Code review",
+          "Customer meetings to refine and align development"
+        ],
+        "projects": [
+          {
+            "name": "PrevisIA",
+            "description": "AI platform to monitor deforestation in the Amazon biome, sponsored by Microsoft AI for Earth, Imazon and Fundo Vale. Static front-end development using HTML, CSS and vanilla JavaScript."
+          }
+        ],
+        "technologies": [
+          "React",
+          "C#",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ]
+      }
+    ],
+    "present": "Present",
+    "duration": {
+      "year": "{{count}} year",
+      "years": "{{count}} years",
+      "month": "{{count}} month",
+      "months": "{{count}} months",
+      "and": "and"
+    },
+    "inProgress": "In progress",
+    "education": [
+      {
+        "degree": "Bachelor of Science in Computer and Information Systems",
+        "institution": "Estácio de Sá University",
+        "location": "Rio de Janeiro, RJ",
+        "startDate": "2018-01",
+        "endDate": "2023-06"
+      }
+    ],
+    "courses": [
+      "Electronics Certificate",
+      "Web Development",
+      "Harvard CS50"
+    ],
+    "skills": [
+      {
+        "category": "Front-end",
+        "items": [
+          "Angular",
+          "AngularJS",
+          "React",
+          "TypeScript",
+          "JavaScript",
+          "HTML",
+          "CSS"
+        ]
+      },
+      {
+        "category": "Back-end",
+        "items": [
+          "C#",
+          ".NET Core",
+          "Node.js",
+          "REST APIs",
+          "BFF Pattern"
+        ]
+      },
+      {
+        "category": "Databases",
+        "items": [
+          "MySQL",
+          "SQL Server",
+          "Oracle DB"
+        ]
+      },
+      {
+        "category": "DevOps & Cloud",
+        "items": [
+          "Docker",
+          "Kubernetes",
+          "AWS",
+          "RabbitMQ",
+          "Elastic Stack"
+        ]
+      },
+      {
+        "category": "Testing",
+        "items": [
+          "Jest",
+          "Cypress",
+          "Unit Testing",
+          "Integration Testing"
+        ]
+      },
+      {
+        "category": "Tools & Methods",
+        "items": [
+          "Git",
+          "Jira",
+          "Scrum",
+          "Code Review",
+          "Pair Programming"
+        ]
+      },
+      {
+        "category": "Languages",
+        "items": [
+          "Portuguese – Native",
+          "English – Advanced"
+        ]
+      }
+    ]
+  }
+}

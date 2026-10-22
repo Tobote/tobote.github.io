@@ -1,0 +1,28 @@
+@let edu = education();
+<article class="relative border-l-2 border-blue-200 pl-6 text-left">
+  <span
+    class="absolute top-1.5 -left-[9px] h-4 w-4 rounded-full border-2 border-white bg-blue-500 ring-2 ring-blue-200"
+    aria-hidden="true"
+  ></span>
+
+  <header class="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
+    <div>
+      <h3 class="text-xl font-bold text-gray-900">{{ edu.degree }}</h3>
+      <p class="text-base font-medium text-blue-600">
+        {{ edu.institution }}
+        @if (edu.location) {
+          <span class="font-normal text-gray-500"> • {{ edu.location }}</span>
+        }
+      </p>
+    </div>
+    <span
+      class="self-start rounded-full bg-gray-100 px-3 py-1 text-sm font-medium whitespace-nowrap text-gray-600"
+    >
+      {{ start() }} – {{ end() ?? ('resume.inProgress' | translate) }}
+    </span>
+  </header>
+
+  @if (edu.summary) {
+    <p class="mt-4 text-gray-700">{{ edu.summary }}</p>
+  }
+</article>
