@@ -4,10 +4,11 @@ import { Resume } from './resume/resume';
 import { Portfolio } from './portfolio/portfolio';
 import { Contact } from './contact/contact';
 
+// Titles are translation keys, resolved by TranslatedTitleStrategy.
 export const routes: Routes = [
-    { path: 'home', component: Home, title: 'Célio Pimentel | Home' },
-    { path: 'portfolio', component: Portfolio, title: 'Célio Pimentel | Portfolio' },
-    { path: 'resume', component: Resume, title: 'Célio Pimentel | Resume' },
-    { path: 'contact', component: Contact, title: 'Célio Pimentel | Contact' },
+    { path: 'home', component: Home, title: 'navigation.home' },
+    { path: 'portfolio', component: Portfolio, title: 'navigation.portfolio' },
+    { path: 'resume', component: Resume, title: 'navigation.resume' },
+    { path: 'contact', component: Contact, title: 'navigation.contact' },
     { path: '**', redirectTo: '/home', pathMatch: 'full' }
 ];

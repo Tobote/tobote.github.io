@@ -1,11 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { ProjectModel } from '../../models/project.model';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { TranslatePipe } from '@ngx-translate/core';
+import { ProjectModel } from '../../models/project.model';
 import { Carousel } from '../../carousel/carousel';
 
 @Component({
   selector: 'app-project-dialog',
-  imports: [MatDialogModule, Carousel],
+  imports: [MatDialogModule, MatButtonModule, MatIconModule, TranslatePipe, Carousel],
   templateUrl: './project-dialog.html',
   styleUrl: './project-dialog.css',
 })

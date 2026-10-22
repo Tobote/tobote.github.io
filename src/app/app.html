@@ -1,7 +1,7 @@
-<div class="shadow-sm">
-  <app-header></app-header>
-  <app-nav></app-nav>
-</div>
-<div class="w-full max-w-5xl mx-auto px-4 mt-3">
-  <router-outlet></router-outlet>
+<div class="flex min-h-screen flex-col">
+  <app-header />
+  <main class="mx-auto w-full max-w-5xl flex-1 px-4 pt-4 pb-12">
+    <router-outlet />
+  </main>
+  <app-footer />
 </div>

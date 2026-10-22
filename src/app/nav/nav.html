@@ -1,38 +1,49 @@
-<nav>
-  <div class="mx-auto w-full max-w-screen-xl px-4 border-b border-gray-200">
-    <ul class="flex list-none justify-center gap-2">
+<nav [attr.aria-label]="'navigation.label' | translate">
+  <!-- Desktop -->
+  <ul class="hidden list-none items-center gap-1 md:flex">
+    @for (link of links; track link.path) {
       <li>
         <a
-          class="nav-text block font-semibold cursor-pointer px-4 py-2 text-gray-500 transition-colors hover:text-gray-900"
-          routerLink="/home"
-          routerLinkActive="text-gray-900"
-          >{{ 'navigation.home' | translate }}</a
+          class="block rounded-full px-4 py-2 text-sm font-semibold text-gray-600 transition hover:bg-gray-100 hover:text-gray-900"
+          [routerLink]="link.path"
+          routerLinkActive="!bg-blue-50 !text-blue-700"
+          ariaCurrentWhenActive="page"
         >
+          {{ link.label | translate }}
+        </a>
       </li>
-       <li>
-        <a
-          class="nav-text block font-semibold cursor-pointer px-4 py-2 text-gray-500 transition-colors hover:text-gray-900"
-          routerLink="/portfolio"
-          routerLinkActive="text-gray-900"
-          >{{ 'navigation.portfolio' | translate }}</a
-        >
-      </li>
-       <li>
-        <a
-          class="nav-text block font-semibold cursor-pointer px-4 py-2 text-gray-500 transition-colors hover:text-gray-900"
-          routerLink="/resume"
-          routerLinkActive="text-gray-900"
-          >{{ 'navigation.resume' | translate }}</a
-        >
-      </li>
-       <li>
-        <a
-          class="nav-text block font-semibold cursor-pointer px-4 py-2 text-gray-500 transition-colors hover:text-gray-900"
-          routerLink="/contact"
-          routerLinkActive="text-gray-900"
-          >{{ 'navigation.contact' | translate }}</a
-        >
-      </li>
+    }
+  </ul>
+
+  <!-- Mobile -->
+  <button
+    type="button"
+    class="flex h-10 w-10 cursor-pointer items-center justify-center rounded-full text-gray-700 hover:bg-gray-100 md:hidden"
+    [attr.aria-expanded]="menuOpen()"
+    aria-controls="mobile-menu"
+    [attr.aria-label]="'navigation.menu' | translate"
+    (click)="menuOpen.set(!menuOpen())"
+  >
+    <mat-icon>{{ menuOpen() ? 'close' : 'menu' }}</mat-icon>
+  </button>
+
+  @if (menuOpen()) {
+    <ul
+      id="mobile-menu"
+      class="absolute inset-x-0 top-full list-none border-b border-gray-200 bg-white px-4 py-2 shadow-md md:hidden"
+    >
+      @for (link of links; track link.path) {
+        <li>
+          <a
+            class="block rounded-lg px-4 py-3 font-semibold text-gray-700 hover:bg-gray-100"
+            [routerLink]="link.path"
+            routerLinkActive="!bg-blue-50 !text-blue-700"
+            ariaCurrentWhenActive="page"
+          >
+            {{ link.label | translate }}
+          </a>
+        </li>
+      }
     </ul>
-  </div>
+  }
 </nav>

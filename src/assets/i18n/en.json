@@ -4,22 +4,38 @@
     "english": "English"
   },
   "header": {
-    "role": "Full-stack Developer"
+    "role": "Full-stack Developer",
+    "language": "Language"
   },
   "navigation": {
     "home": "Home",
     "portfolio": "Portfolio",
     "resume": "Resume",
-    "contact": "Contact"
+    "contact": "Contact",
+    "label": "Main navigation",
+    "menu": "Open menu"
   },
   "home": {
+    "hero": {
+      "greeting": "Hi, I'm Célio",
+      "headline": "Full-stack developer building modern web applications",
+      "viewPortfolio": "View Portfolio",
+      "downloadResume": "Download Resume",
+      "contact": "Get in Touch"
+    },
+    "stats": {
+      "years": "Years of experience",
+      "companies": "Companies",
+      "technologies": "Technologies"
+    },
     "about": {
       "heading": "About Me",
       "imageAlt": "Portrait of Célio Pimentel",
-      "biography": "I'm a software developer on a constant learning road. Graduated in Information Systems from Estácio de Sá University, with experience in the last 5 years in Software Development, and focus on Fullstack development, working on innovative projects and with various technologies such as Angular, Node.js, C#, .Net Core, and Javascript."
+      "biography": "I'm a software developer on a constant learning road. Graduated in Information Systems from Estácio de Sá University, with over {{years}} years of experience in software development and a focus on full-stack development, working on innovative projects with technologies such as React, Angular, Node.js, C#, .NET Core and JavaScript."
     },
     "featuredProject": {
-      "heading": "Featured Project"
+      "heading": "Featured Project",
+      "cta": "See all projects"
     }
   },
   "resume": {
@@ -238,5 +254,151 @@
         ]
       }
     ]
+  },
+  "contact": {
+    "heading": "Get in Touch",
+    "intro": "I'm open to new opportunities and collaborations. Feel free to reach out!",
+    "copy": "Copy",
+    "copied": "Copied!",
+    "items": [
+      {
+        "icon": "email",
+        "label": "Email",
+        "value": "celiopimentel@outlook.com",
+        "url": "mailto:celiopimentel@outlook.com",
+        "copyable": true
+      }
+    ],
+    "socialHeading": "Social Media",
+    "socialIntro": "Follow my work and connect with me.",
+    "social": [
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/celiopimentel/"
+      },
+      {
+        "name": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/celiopimentel"
+      }
+    ],
+    "resumeCta": "Want to know more about my experience?",
+    "resumeLink": "Check out my resume."
+  },
+  "portfolio": {
+    "heading": "Portfolio",
+    "intro": "A selection of projects I have built. Filter by technology to find what interests you.",
+    "filters": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "clear": "Clear filters"
+    },
+    "showing": "Showing {{count}} of {{total}} projects",
+    "empty": "No projects match the selected technologies.",
+    "readMore": "Read more",
+    "description": "Description",
+    "viewProject": "View on GitHub",
+    "close": "Close",
+    "projects": [
+      {
+        "id": 0,
+        "title": "Sample Python Project",
+        "summary": "Python project that analyzes stock market data.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "Python"
+        ]
+      },
+      {
+        "id": 1,
+        "title": "Sample Angular App",
+        "summary": "Fullstack web app developed using Angular and Node.js.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "Angular",
+          "TypeScript",
+          "Node.js"
+        ]
+      },
+      {
+        "id": 2,
+        "title": "Sample .NET App",
+        "summary": "Fullstack web app developed using React and ASP.NET.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "React",
+          "C#",
+          "ASP.NET"
+        ]
+      },
+      {
+        "id": 3,
+        "title": "Web API Project",
+        "summary": "Web API project developed for a class project.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "C#",
+          "ASP.NET"
+        ]
+      },
+      {
+        "id": 4,
+        "title": "Chrome Extension",
+        "summary": "Chrome extension that tracks the prices of furniture.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "JavaScript"
+        ]
+      },
+      {
+        "id": 5,
+        "title": "Mobile App",
+        "summary": "Mobile app developed in Java that tracks the departure and arrival of trains.",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+        "projectUrl": "https://github.com",
+        "pictures": [
+          "/assets/img/Image1.png",
+          "/assets/img/Image2.png",
+          "/assets/img/Image3.png"
+        ],
+        "tags": [
+          "Java"
+        ]
+      }
+    ]
+  },
+  "footer": {
+    "rights": "All rights reserved."
   }
 }

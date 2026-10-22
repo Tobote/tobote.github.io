@@ -8,4 +8,6 @@ export interface ProjectModel {
     projectUrl: string;
     pictures: string[];
     tags: TagModel[];
+    /** Shown on the Home page. If no project is featured, the first one is used. */
+    featured?: boolean;
 }

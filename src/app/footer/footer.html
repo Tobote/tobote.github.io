@@ -1,0 +1,14 @@
+<footer class="border-t border-gray-200 bg-white/70">
+  <div
+    class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-gray-500 sm:flex-row"
+  >
+    <p>© {{ year }} Célio Pimentel. {{ 'footer.rights' | translate }}</p>
+    <ul class="flex list-none flex-wrap justify-center gap-4">
+      @for (link of links; track link.path) {
+        <li>
+          <a class="hover:text-blue-600" [routerLink]="link.path">{{ link.label | translate }}</a>
+        </li>
+      }
+    </ul>
+  </div>
+</footer>

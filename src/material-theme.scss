@@ -28,7 +28,12 @@ body {
   // Set a default background, font and text colors for the application using
   // Angular Material's system-level CSS variables. Learn more about these
   // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
+  // Light gray base with soft blue glows at the top; fixed so it doesn't scroll with the content.
+  background:
+    radial-gradient(circle at 10% 0%, rgb(59 130 246 / 0.12), transparent 40%),
+    radial-gradient(circle at 90% 5%, rgb(14 165 233 / 0.1), transparent 35%),
+    #f8fafc;
+  background-attachment: fixed;
   color: var(--mat-sys-on-surface);
   font: var(--mat-sys-body-medium);
 

@@ -1,28 +1,39 @@
-<div class="flex h-full flex-col overflow-hidden rounded shadow-[0_0_12px_rgba(0,0,0,0.15)]">
-  <div class="px-6 py-4">
-    <div class="font-bold text-xl mb-2 text-center">{{project?.title}}</div>
-    <p class="text-gray-700 text-base text-center">{{project?.summary}}</p>
-    <div class="text-center cursor-pointer" (click)="openDialog()">
-      <a
-        
-        class="mt-4 inline-flex items-center gap-1.5 rounded-lg border border-gray-300 bg-blue-500 px-4 py-2.5 text-sm font-medium text-white shadow-xs hover:bg-blue-600 focus:ring-4 focus:ring-gray-200 focus:outline-none"
-      >
-        Read more
-        <svg class="h-4 w-4" aria-hidden="true" fill="none" viewBox="0 0 24 24">
-          <path
-            stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
-            d="M19 12H5m14 0-4 4m4-4-4-4"
-          />
-        </svg>
-      </a>
+@let p = project();
+<article
+  class="group flex h-full flex-col overflow-hidden rounded-lg border border-gray-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
+>
+  @if (p.pictures.length) {
+    <div class="aspect-video overflow-hidden bg-gray-100">
+      <img
+        class="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+        [src]="p.pictures[0]"
+        [alt]="p.title"
+        loading="lazy"
+      />
     </div>
+  }
+
+  <div class="flex flex-1 flex-col p-5">
+    <h2 class="text-lg font-bold text-gray-900">{{ p.title }}</h2>
+    <p class="mt-2 flex-1 text-sm text-gray-600">{{ p.summary }}</p>
+
+    <div class="mt-4 flex flex-wrap gap-2">
+      @for (tag of p.tags; track tag) {
+        <span class="rounded-full px-2.5 py-0.5 text-xs font-semibold ring-1" [class]="tag.classes">
+          {{ tag.toString() }}
+        </span>
+      }
+    </div>
+
+    <button
+      type="button"
+      class="mt-5 inline-flex cursor-pointer items-center gap-1 self-start text-sm font-semibold text-blue-600 hover:text-blue-700 focus-visible:underline"
+      (click)="openDialog()"
+    >
+      {{ 'portfolio.readMore' | translate }}
+      <mat-icon class="!h-4 !w-4 !text-base !leading-none translate-y-px transition group-hover:translate-x-0.5" aria-hidden="true">
+        arrow_forward
+      </mat-icon>
+    </button>
   </div>
-  <div class="mt-auto px-6 pt-4 pb-2">
-    @for (tag of project?.tags; track tag) {
-        <span class="inline-block bg-gray-100 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#{{tag.toString()}}</span>
-    }
-  </div>  
-</div>
+</article>
