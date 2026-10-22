@@ -188,3 +188,9 @@ src/
 - [Tailwind CSS 4](https://tailwindcss.com/) for styling
 - [Angular Material](https://material.angular.dev/) for icons, dialogs and the resume accordion
 - [ngx-translate](https://github.com/ngx-translate/core) for translations
+
+## License
+
+The code is available under the [MIT License](LICENSE): you are free to use, change and share it, including for your own portfolio.
+
+The personal content is **not** covered by this license and may not be reused: the texts in `src/assets/i18n/`, the photo, the resume PDFs and the project screenshots in `src/assets/`. Replace them with your own.
