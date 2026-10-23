@@ -297,7 +297,26 @@
     "description": "Descrição",
     "viewProject": "Ver no GitHub",
     "close": "Fechar",
-    "projects": []
+    "projects": [
+      {
+        "id": 1,
+        "repo": "event-driven-order-process",
+        "summary": "Projeto de estudo: um sistema de processamento de pedidos orientado a eventos (pedido → pagamento → estoque → notificação, com saga e compensação), construído com desenvolvimento orientado a especificações.",
+        "pictures": ["assets/img/eventDriven.png"]
+      },
+      {
+        "id": 2,
+        "repo": "claude-ai-base",
+        "summary": "Uma base de IA reutilizável para desenvolvimento orientado a especificações com Claude Code e GitHub Spec Kit, empacotada como um marketplace de plugins do Claude Code chamado ai-base.",
+        "pictures": ["assets/img/claudeAi.png"]
+      },
+      {
+        "id": 3,
+        "repo": "RabbitMQTest",
+        "summary": "Projeto que implementa uma fila simples no RabbitMQ. É necessário iniciar uma imagem Docker local do RabbitMQ para funcionar.",
+        "pictures": ["assets/img/rabbitMq.png"]
+      }
+    ]
   },
   "footer": {
     "rights": "Todos os direitos reservados."

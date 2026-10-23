@@ -116,10 +116,7 @@ export class ProjectsService {
       summary: project.summary ?? description,
       description: project.description ?? project.summary ?? description,
       projectUrl: project.projectUrl ?? repo?.html_url ?? '',
-      // GitHub's social preview card, so every repository has an image.
-      pictures:
-        project.pictures ??
-        (repo ? [`https://opengraph.githubassets.com/1/${GITHUB_USER}/${repo.name}`] : []),
+      pictures: project.pictures ?? [],
       tags: [...new Set(tags.filter((tag): tag is TagModel => !!tag))],
       featured: project.featured ?? repo?.topics?.includes(FEATURED_TOPIC),
     };

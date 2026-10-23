@@ -300,7 +300,23 @@
     "description": "Description",
     "viewProject": "View on GitHub",
     "close": "Close",
-    "projects": []
+    "projects": [
+      {
+        "id": 1,
+        "repo": "event-driven-order-process",
+        "pictures": ["assets/img/eventDriven.png"]
+      },
+      {
+        "id": 2,
+        "repo": "claude-ai-base",
+        "pictures": ["assets/img/claudeAi.png"]
+      },
+      {
+        "id": 3,
+        "repo": "RabbitMQTest",
+        "pictures": ["assets/img/rabbitMq.png"]
+      }
+    ]
   },
   "footer": {
     "rights": "All rights reserved."

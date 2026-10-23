@@ -87,7 +87,7 @@ Each file holds all the text for one language. Edit both and keep the same struc
 **Projects from GitHub:** the Portfolio page also lists your public GitHub repositories, after the projects in the JSON files.
 Set your user in `GITHUB_USER` in `src/app/services/projects.service.ts`. Forks, archived repositories and the site's own repository are skipped.
 
-- The card uses the repository's name, description, language and topics (as tags), and GitHub's preview image.
+- The card uses the repository's name, description, language and topics (as tags). Images only come from the JSON entry (see below).
 - Add the `featured` topic to a repository to show it on the Home page, or `portfolio-hide` to leave it out.
 - To add translations or screenshots, add an entry with `repo` set to the repository name. Fields you fill in replace GitHub's, the rest comes from GitHub:
 

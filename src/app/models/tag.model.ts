@@ -25,6 +25,9 @@ export class TagModel {
     static readonly JAVASCRIPT = new TagModel('JavaScript', 'yellow');
     static readonly HTML = new TagModel('HTML', 'orange');
     static readonly CSS = new TagModel('CSS', 'blue');
+    static readonly DOTNET = new TagModel('.NET', 'purple');
+    static readonly RABBITMQ = new TagModel('RabbitMQ', 'orange');
+    static readonly CLAUDE = new TagModel('Claude', 'orange');
 
     private constructor(
         private readonly key: string,
@@ -36,6 +39,7 @@ export class TagModel {
 
     static {
         TagModel.byGitHubName.set('csharp', TagModel.CSHARP);
+        TagModel.byGitHubName.set('dotnet', TagModel.DOTNET);
     }
 
     /** Finds a tag by its name, e.g. "Angular". Used to read tags from the i18n JSON files. */

@@ -19,6 +19,7 @@ const FRAMEWORKS: TagModel[] = [
   TagModel.REACT,
   TagModel.NODEJS,
   TagModel.ASPNET,
+  TagModel.DOTNET,
 ];
 
 @Component({
