@@ -11,6 +11,8 @@ const COLOR_CLASSES: Record<string, string> = {
 
 export class TagModel {
     private static readonly all = new Map<string, TagModel>();
+    /** Tags indexed by a normalised name, plus aliases for GitHub topics (which can't contain "#"). */
+    private static readonly byGitHubName = new Map<string, TagModel>();
 
     static readonly ANGULAR = new TagModel('Angular', 'red');
     static readonly TYPESCRIPT = new TagModel('TypeScript', 'blue');
@@ -29,11 +31,25 @@ export class TagModel {
         public readonly color: string
     ) {
         TagModel.all.set(key, this);
+        TagModel.byGitHubName.set(TagModel.normalize(key), this);
+    }
+
+    static {
+        TagModel.byGitHubName.set('csharp', TagModel.CSHARP);
     }
 
     /** Finds a tag by its name, e.g. "Angular". Used to read tags from the i18n JSON files. */
     static fromKey(key: string): TagModel | undefined {
         return TagModel.all.get(key);
+    }
+
+    /** Finds a tag from a GitHub language ("C#") or topic ("nodejs", "csharp"), ignoring case and punctuation. */
+    static fromGitHub(name: string): TagModel | undefined {
+        return TagModel.byGitHubName.get(TagModel.normalize(name));
+    }
+
+    private static normalize(name: string): string {
+        return name.toLowerCase().replace(/[^a-z0-9#]/g, '');
     }
 
     /** Tailwind classes for the tag's colour (background, text and ring). */

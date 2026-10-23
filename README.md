@@ -84,6 +84,19 @@ Each file holds all the text for one language. Edit both and keep the same struc
 - `featured: true` picks the project shown on the Home page. Without it, the first project is used.
 - `tags` must match tags defined in `src/app/models/tag.model.ts` (see [Technology tags](#technology-tags)). Unknown tags are skipped.
 
+**Projects from GitHub:** the Portfolio page also lists your public GitHub repositories, after the projects in the JSON files.
+Set your user in `GITHUB_USER` in `src/app/services/projects.service.ts`. Forks, archived repositories and the site's own repository are skipped.
+
+- The card uses the repository's name, description, language and topics (as tags), and GitHub's preview image.
+- Add the `featured` topic to a repository to show it on the Home page, or `portfolio-hide` to leave it out.
+- To add translations or screenshots, add an entry with `repo` set to the repository name. Fields you fill in replace GitHub's, the rest comes from GitHub:
+
+```json
+{ "id": 10, "repo": "my-app", "summary": "Texto curto em português.", "pictures": ["assets/img/my-app-1.png"] }
+```
+
+- If GitHub can't be reached (for example, after 60 requests per hour from the same visitor), only the JSON projects are shown.
+
 **A contact item and a social link:**
 
 ```json
